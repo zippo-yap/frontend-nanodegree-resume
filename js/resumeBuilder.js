@@ -31,7 +31,8 @@ var work = {
       "dates": "June 2012 – June 2014",
       "description": "Key member of the Student Services team contributing to the delivery of excellent customer service. Front desk position with responsibilities in assisting with student enrolments and administration, campus operations and events and marketing. Involved in the re-design, implementation and launch of NZ Website."
     }
-  ]
+  ],
+  "display": function () {}
 }; // end work object
 
 var education = {
@@ -65,7 +66,8 @@ var education = {
       "date": "",
       "url": ""
     }
-  ]
+  ],
+  "display": function () {}
   }; // end education object
 
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
