@@ -34,6 +34,40 @@ var work = {
   ]
 }; // end work object
 
+var education = {
+  "schools": [
+    {
+      "name": "",
+      "location": "",
+      "degree": "",
+      "majors": ["", ""],
+      "dates": ""
+    },
+    {
+      "name": "",
+      "location": "",
+      "degree": "",
+      "majors": ["", ""],
+      "dates": ""
+    }
+  ], // end schools array
+    // start object online courses
+  "onlineCourses": [
+    {
+      "title": "",
+      "school": "",
+      "date": "",
+      "url": ""
+    },
+    {
+      "title": "",
+      "school": "",
+      "date": "",
+      "url": ""
+    }
+  ]
+  }; // end education object
+
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
       var formattedName = HTMLheaderName.replace("%data%", bio.name);
       var formattedPic = HTMLbioPic.replace("%data%", bio.bioPic);
