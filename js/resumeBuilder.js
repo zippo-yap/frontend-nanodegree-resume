@@ -75,30 +75,47 @@ var education = {
   ]
 }; // end education object
 
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-var formattedPic = HTMLbioPic.replace("%data%", bio.bioPic);
-var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-//var formattedSkills = HTMLskills.replace("%data%", bio.skills[0]);
-var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-var formattedTwitter= HTMLtwitter.replace("%data%", bio.contacts.twitter);
-var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+var projects = {
+  "projects":[ 
+    {
+      "title": "Sample Project 1", 
+      "dates": "2016",
+      "description": "Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt.",
+      "images": ["images/197x148.gif", "images/197x148.gif"] 
+    },
+    {
+      "title": "Sample Project 2", 
+      "dates": "2015",
+      "description": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.",
+      "images": ["images/197x148.gif", "images/197x148.gif"] 
+    }
+  ]
+}
 
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-$("#header").append(formattedPic);
-$("#header").append(formattedMessage);
-$("#topContacts").append(formattedMobile);
-$("#topContacts").append(formattedEmail);
-$("#topContacts").append(formattedTwitter);
-$("#topContacts").append(formattedGithub);
-$("#topContacts").append(formattedLocation);
-//$("#header").append(HTMLskillsStart);
-//$("#header").append(formattedSkills);
-$("#footerContacts").append(formattedMobile);
-$("#footerContacts").append(formattedEmail);
-$("#footerContacts").append(formattedTwitter);
-$("#footerContacts").append(formattedGithub);
-$("#footerContacts").append(formattedLocation);
+// var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+// var formattedName = HTMLheaderName.replace("%data%", bio.name);
+// var formattedPic = HTMLbioPic.replace("%data%", bio.bioPic);
+// var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+// //var formattedSkills = HTMLskills.replace("%data%", bio.skills[0]);
+// var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+// var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+// var formattedTwitter= HTMLtwitter.replace("%data%", bio.contacts.twitter);
+// var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+// var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+
+// $("#header").prepend(formattedRole);
+// $("#header").prepend(formattedName);
+// $("#header").append(formattedPic);
+// $("#header").append(formattedMessage);
+// $("#topContacts").append(formattedMobile);
+// $("#topContacts").append(formattedEmail);
+// $("#topContacts").append(formattedTwitter);
+// $("#topContacts").append(formattedGithub);
+// $("#topContacts").append(formattedLocation);
+// //$("#header").append(HTMLskillsStart);
+// //$("#header").append(formattedSkills);
+// $("#footerContacts").append(formattedMobile);
+// $("#footerContacts").append(formattedEmail);
+// $("#footerContacts").append(formattedTwitter);
+// $("#footerContacts").append(formattedGithub);
+// $("#footerContacts").append(formattedLocation);
