@@ -68,12 +68,13 @@ var education = {
     }
   ],
   "display": function () {}
-  }; // end education object
+}; // end education object
 
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedPic = HTMLbioPic.replace("%data%", bio.bioPic);
 var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+//var formattedSkills = HTMLskills.replace("%data%", bio.skills[0]);
 var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
 var formattedTwitter= HTMLtwitter.replace("%data%", bio.contacts.twitter);
@@ -84,8 +85,15 @@ $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
 $("#header").append(formattedPic);
 $("#header").append(formattedMessage);
-$("#topContacts").prepend(formattedMobile);
-$("#topContacts").prepend(formattedEmail);
-$("#topContacts").prepend(formattedTwitter);
-$("#topContacts").prepend(formattedGithub);
-$("#topContacts").prepend(formattedLocation);
+$("#topContacts").append(formattedMobile);
+$("#topContacts").append(formattedEmail);
+$("#topContacts").append(formattedTwitter);
+$("#topContacts").append(formattedGithub);
+$("#topContacts").append(formattedLocation);
+//$("#header").append(HTMLskillsStart);
+//$("#header").append(formattedSkills);
+$("#footerContacts").append(formattedMobile);
+$("#footerContacts").append(formattedEmail);
+$("#footerContacts").append(formattedTwitter);
+$("#footerContacts").append(formattedGithub);
+$("#footerContacts").append(formattedLocation);
