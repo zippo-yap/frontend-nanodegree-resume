@@ -37,34 +37,41 @@ var work = {
 
 var education = {
   "schools": [
-    {
-      "name": "",
-      "location": "",
+     {
+      "name": "Enspiral Dev Academy",
+      "location": "Auckland",
       "degree": "",
-      "majors": ["", ""],
-      "dates": ""
+      "majors": ["Web Development"],
+      "dates": "In progress"
     },
     {
-      "name": "",
-      "location": "",
-      "degree": "",
-      "majors": ["", ""],
-      "dates": ""
+      "name": "University of Auckland",
+      "location": "Auckland",
+      "degree": "BSc",
+      "majors": ["Biology", "Biomed"],
+      "dates": "2010-2012"
+    },
+    {
+      "name": "Media Design School",
+      "location": "Auckland",
+      "degree": "Dipl",
+      "majors": ["Graphic Design"],
+      "dates": "2006-2007"
     }
   ], // end schools array
     // start object online courses
   "onlineCourses": [
     {
-      "title": "",
-      "school": "",
-      "date": "",
-      "url": ""
+      "title": "Javascript Basics",
+      "school": "Udacity",
+      "date": "2016",
+      "url": "https://www.udacity.com/course/javascript-basics--ud804"
     },
     {
-      "title": "",
-      "school": "",
-      "date": "",
-      "url": ""
+      "title": "Intro to HTML and CSS",
+      "school": "Udacity",
+      "date": "2016",
+      "url": "https://www.udacity.com/course/intro-to-html-and-css--ud304"
     }
   ],
   "display": function () {}
