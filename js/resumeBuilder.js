@@ -71,21 +71,21 @@ var education = {
   }; // end education object
 
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-      var formattedName = HTMLheaderName.replace("%data%", bio.name);
-      var formattedPic = HTMLbioPic.replace("%data%", bio.bioPic);
-      var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-      var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-      var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-      var formattedTwitter= HTMLtwitter.replace("%data%", bio.contacts.twitter);
-      var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-      var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+var formattedName = HTMLheaderName.replace("%data%", bio.name);
+var formattedPic = HTMLbioPic.replace("%data%", bio.bioPic);
+var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+var formattedTwitter= HTMLtwitter.replace("%data%", bio.contacts.twitter);
+var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 
-      $("#header").prepend(formattedRole);
-      $("#header").prepend(formattedName);
-      $("#header").append(formattedPic);
-      $("#header").append(formattedMessage);
-      $("#topContacts").prepend(formattedMobile);
-      $("#topContacts").prepend(formattedEmail);
-      $("#topContacts").prepend(formattedTwitter);
-      $("#topContacts").prepend(formattedGithub);
-      $("#topContacts").prepend(formattedLocation);
+$("#header").prepend(formattedRole);
+$("#header").prepend(formattedName);
+$("#header").append(formattedPic);
+$("#header").append(formattedMessage);
+$("#topContacts").prepend(formattedMobile);
+$("#topContacts").prepend(formattedEmail);
+$("#topContacts").prepend(formattedTwitter);
+$("#topContacts").prepend(formattedGithub);
+$("#topContacts").prepend(formattedLocation);
