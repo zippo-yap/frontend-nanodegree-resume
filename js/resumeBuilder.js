@@ -36,7 +36,7 @@ var work = {
 
 var education = {
   "schools": [
-     {
+    {
       "name": "Enspiral Dev Academy",
       "location": "Auckland",
       "degree": "",
@@ -128,3 +128,16 @@ if (bio.skills.length > 0) {
   formattedSkills = HTMLskills.replace("%data%", bio.skills[2]);
   $("#skills").append(formattedSkills);
 };
+
+//(work[key][0]) <-- Each job, now we need to loop through
+
+for (var job in work.jobs){
+  if (work.jobs.hasOwnProperty(job)) {
+      $("#workExperience").append(HTMLworkStart);
+      var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+      var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+      var formattedWorkEmployerTitle = formattedWorkEmployer + formattedWorkTitle;
+      $(".work-entry:last").append(formattedWorkEmployerTitle);
+  }
+}
+
