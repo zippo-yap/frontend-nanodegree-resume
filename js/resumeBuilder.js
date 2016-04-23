@@ -81,13 +81,13 @@ var projects = {
       "title": "Sample Project 1", 
       "dates": "2016",
       "description": "Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt.",
-      "images": ["images/197x148.gif", "images/197x148.gif"] 
+      "images": ["images/197x148.gif", "images/197x148.gif"]
     },
     {
       "title": "Sample Project 2", 
       "dates": "2015",
       "description": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.",
-      "images": ["images/197x148.gif", "images/197x148.gif"] 
+      "images": ["images/197x148.gif", "images/197x148.gif"]
     }
   ]
 }
@@ -133,19 +133,40 @@ if (bio.skills.length > 0) {
 function displayWork(){
   for (var job in work.jobs){
     if (work.jobs.hasOwnProperty(job)) {
-        $("#workExperience").append(HTMLworkStart);
-        var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-        var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-        var formattedWorkEmployerTitle = formattedWorkEmployer + formattedWorkTitle;
-        var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-        var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-        var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-        $(".work-entry:last").append(formattedWorkEmployerTitle);
-        $(".work-entry:last").append(formattedWorkDates);
-        $(".work-entry:last").append(formattedWorkLocation);
-        $(".work-entry:last").append(formattedWorkDescription);
+      $("#workExperience").append(HTMLworkStart);
+      var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+      var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+      $(".work-entry:last").append(formattedWorkEmployerTitle);
+      var formattedWorkEmployerTitle = formattedWorkEmployer + formattedWorkTitle;
+      var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+      $(".work-entry:last").append(formattedWorkDates);
+      var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+      $(".work-entry:last").append(formattedWorkLocation);
+      var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+      $(".work-entry:last").append(formattedWorkDescription);
     }
   }
 }
 
 displayWork();
+
+projects.display = function() {
+  for(project in projects.projects){
+    $("#projects").append(HTMLprojectStart);
+    var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+    $(".project-entry:last").append(formattedProjectTitle);
+    var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+    $(".project-entry:last").append(formattedProjectDates);
+    var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+    $(".project-entry:last").append(formattedProjectDescription);
+
+    if (projects.projects[project].images.length > 0) {
+      for (pic in projects.projects[project].images){
+        var formattedProjectImages = HTMLprojectImage.replace("%data%", projects.projects[project].images[pic]);
+        $(".project-entry:last").append(formattedProjectImages);
+      }
+    }
+  }
+}
+
+projects.display();
