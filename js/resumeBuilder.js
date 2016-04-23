@@ -130,20 +130,22 @@ if (bio.skills.length > 0) {
 };
 
 //(work[key][0]) <-- Each job, now we need to loop through
-
-for (var job in work.jobs){
-  if (work.jobs.hasOwnProperty(job)) {
-      $("#workExperience").append(HTMLworkStart);
-      var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-      var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-      var formattedWorkEmployerTitle = formattedWorkEmployer + formattedWorkTitle;
-      var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-      var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-      var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-      $(".work-entry:last").append(formattedWorkEmployerTitle);
-      $(".work-entry:last").append(formattedWorkDates);
-      $(".work-entry:last").append(formattedWorkLocation);
-      $(".work-entry:last").append(formattedWorkDescription);
+function displayWork(){
+  for (var job in work.jobs){
+    if (work.jobs.hasOwnProperty(job)) {
+        $("#workExperience").append(HTMLworkStart);
+        var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+        var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+        var formattedWorkEmployerTitle = formattedWorkEmployer + formattedWorkTitle;
+        var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+        var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+        var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+        $(".work-entry:last").append(formattedWorkEmployerTitle);
+        $(".work-entry:last").append(formattedWorkDates);
+        $(".work-entry:last").append(formattedWorkLocation);
+        $(".work-entry:last").append(formattedWorkDescription);
+    }
   }
 }
 
+displayWork();
