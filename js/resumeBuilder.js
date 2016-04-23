@@ -27,7 +27,7 @@ var work = {
     {
       "employer": "The College of Law",
       "title": "Student Services Officer",
-      "location": "Auckland",
+      "location": "Dubai",
       "dates": "June 2012 – June 2014",
       "description": "Key member of the Student Services team contributing to the delivery of excellent customer service. Front desk position with responsibilities in assisting with student enrolments and administration, campus operations and events and marketing. Involved in the re-design, implementation and launch of NZ Website."
     }
@@ -148,6 +148,12 @@ function displayWork(){
   }
 }
 
+$(document).click(function(loc) {
+  var x = loc.pageX;
+  var y = loc.pageY;
+  logClicks(x,y);
+});
+
 displayWork();
 
 projects.display = function() {
@@ -170,3 +176,5 @@ projects.display = function() {
 }
 
 projects.display();
+
+$("#mapDiv").append(googleMap);
