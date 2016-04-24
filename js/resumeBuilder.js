@@ -176,23 +176,23 @@ var projects = {
 		"images": ["images/197x148.gif", "images/197x148.gif"]
 	}],
 	"display": function() {
-  for(project in projects.projects){
-    $("#projects").append(HTMLprojectStart);
-    var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-    $(".project-entry:last").append(formattedProjectTitle);
-    var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
-    $(".project-entry:last").append(formattedProjectDates);
-    var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-    $(".project-entry:last").append(formattedProjectDescription);
+		for(project in projects.projects){
+			$("#projects").append(HTMLprojectStart);
+			var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+			$(".project-entry:last").append(formattedProjectTitle);
+			var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+			$(".project-entry:last").append(formattedProjectDates);
+			var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+			$(".project-entry:last").append(formattedProjectDescription);
 
-    if (projects.projects[project].images.length > 0) {
-      for (pic in projects.projects[project].images){
-        var formattedProjectImages = HTMLprojectImage.replace("%data%", projects.projects[project].images[pic]);
-        $(".project-entry:last").append(formattedProjectImages);
-      }
+			if (projects.projects[project].images.length > 0) {
+                for (pic in projects.projects[project].images){
+                    var formattedProjectImages = HTMLprojectImage.replace("%data%", projects.projects[project].images[pic]);
+                    $(".project-entry:last").append(formattedProjectImages);
+                }
+            }
+        }
     }
-  }
-}
 }; // end projects object
 
 $(document).click(function (loc) {
@@ -204,11 +204,10 @@ $(document).click(function (loc) {
 $("#main").append(internationalizeButton)
 
 function inName(name) {
-  name = name.trim().split(" ");
-  console.log(name);
-  name[1] = name[1].toUpperCase();
-  name[0] = name[0].slice(0, 1).toUpperCase() + name[0].slice(1).toLowerCase();
-  return name[0] + " " + name[1];
+    name = name.trim().split(" ");
+    name[1] = name[1].toUpperCase();
+    name[0] = name[0].slice(0, 1).toUpperCase() + name[0].slice(1).toLowerCase();
+    return name[0] + " " + name[1];
 }
 
 bio.display();
